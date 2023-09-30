@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export function Person({ name, hairColor, eyeColor }) {
   return (
     <li>
@@ -9,3 +11,9 @@ export function Person({ name, hairColor, eyeColor }) {
     </li>
   );
 }
+
+Person.propTypes = {
+  name: PropTypes.string.isRequired,
+  hairColor: PropTypes.string.isRequired,
+  eyeColor: PropTypes.string.isRequired
+};
